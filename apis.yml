@@ -1,23 +1,96 @@
 aid: intarcia-therapeutics
 name: Intarcia Therapeutics
-description: 'Intarcia Therapeutics is a company surfaced via the API Evangelist harvest backlog (source:
-  secondary-market) and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  Intarcia Therapeutics, Inc. was a Boston-headquartered clinical-stage biopharmaceutical and
+  drug-delivery company, founded in 1997 and once valued at roughly $5.5B, that developed the
+  Medici Drug Delivery System — a matchstick-sized subdermal osmotic mini-pump engineered to
+  stabilize therapeutic proteins and peptides at body temperature and release them continuously
+  for months from a single placement. Its lead candidate, ITCA 650, delivered the GLP-1 receptor
+  agonist exenatide for type 2 diabetes over three- to six-month intervals. The FDA issued
+  complete response letters on the ITCA 650 new drug application in 2017 and again in 2020, after
+  which the company ran out of capital, laid off staff, closed its Boston, Hayward (CA) and
+  Durham (NC) sites and liquidated its manufacturing and laboratory equipment at auction. Its
+  remaining assets — the Medici platform and ITCA 650 — were acquired by i2o Therapeutics in
+  August 2023, and FDA published a final decision refusing to approve the ITCA 650 application on
+  2024-08-23. Intarcia was a drug-device developer rather than a software company: its corporate
+  site carried only Medici System, Pipeline, Newsroom, About, Leadership and Careers sections and
+  never published a developer program, public API, SDK, webhook surface or machine-readable
+  specification of any kind. As of 2026-08-23 both intarcia.com and intarciatherapeutics.com
+  resolve to an Atom.com domain-broker parking page that offers the names for sale and returns
+  HTTP 404 on every path, and no developer-facing subdomain resolves. This profile is retained as
+  a historical record; there is no API surface to enrich.
 url: https://raw.githubusercontent.com/api-evangelist/intarcia-therapeutics/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
+x-secondary-market-listing: https://forgeglobal.com/intarcia-therapeutics_stock/
 x-tier: stub
-x-tier-reason: harvest
-specificationVersion: '0.20'
+x-tier-reason: defunct-no-api-surface
+x-status: defunct
+x-shutdown-note: >-
+  Wound down after the FDA's second complete response letter in 2020; equipment liquidated at
+  auction and the Medici / ITCA 650 assets acquired by i2o Therapeutics in August 2023. FDA
+  published its final decision refusing approval of ITCA 650 on 2024-08-23.
+x-successor: i2o Therapeutics (acquired the Medici Drug Delivery System and ITCA 650, 2023-08)
+x-domain-status: parked-for-sale
+x-domain-note: >-
+  intarcia.com and intarciatherapeutics.com both resolve to 52.20.84.62 on ns1/ns2.atom.com and
+  serve an Atom.com domain-broker landing page. Every /.well-known/ and spec path returns a hard
+  HTTP 404 (679 bytes, identical to a nonsense control path), so there are no soft-200 false
+  positives to guard against. These hosts are NOT company-controlled and are deliberately not
+  wired as a Website pointer. See well-known/intarcia-therapeutics-well-known.yml.
+x-venue-listing-note: >-
+  The Forge Global secondary-market page this company was harvested from is recorded above as
+  x-secondary-market-listing and is deliberately NOT wired as a common[] Website pointer — a
+  trading-venue listing is not a company web presence (network roadmap#56).
+specificationVersion: '0.23'
 created: '2026-08-23'
 modified: '2026-08-23'
 tags:
 - Company
+- Defunct
+- Biotechnology
+- Pharmaceuticals
+- Drug Delivery
+- Medical Devices
+- Diabetes
+- Health
+- Life Sciences
 apis: []
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
-common:
-- type: Website
-  url: https://forgeglobal.com/intarcia-therapeutics_stock/
+common: []
+x-coverage:
+  state: none
+  reason: defunct
+  detail: >-
+    Intarcia Therapeutics wound down after the FDA's 2020 complete response letter and sold the
+    Medici / ITCA 650 assets to i2o Therapeutics in 2023; intarcia.com and
+    intarciatherapeutics.com are now an Atom.com domain-broker parking page that hard-404s every
+    /.well-known/ and spec path, and api., developer., docs., portal., dev. and app. subdomains
+    do not resolve at all.
+  evidence:
+  - url: https://intarcia.com/
+    status: 403
+  - url: https://intarcia.com/zzz-control-nonsense-xyz789
+    status: 404
+  - url: https://intarcia.com/openapi.json
+    status: 404
+  - url: https://intarcia.com/llms.txt
+    status: 404
+  - url: https://intarcia.com/.well-known/agent-card.json
+    status: 404
+  - url: https://intarciatherapeutics.com/.well-known/agent.json
+    status: 404
+  - url: https://api.github.com/orgs/intarcia
+    status: 200
+  - url: https://forgeglobal.com/intarcia-therapeutics_stock/
+    status: 403
+  checked: '2026-08-23'
+x-enrichment:
+  date: '2026-08-23'
+  status: nochange
+  artifacts_added: 1
+  pass: local-v1

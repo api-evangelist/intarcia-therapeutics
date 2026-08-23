@@ -1,0 +1,112 @@
+generated: '2026-08-23'
+method: probed
+source: >-
+  Direct HTTP probes of every host historically associated with Intarcia Therapeutics,
+  2026-08-23.
+note: >-
+  NO POINTER IS EMITTED FOR THIS FILE. Every path on every host returned HTTP 404, so there
+  is no served /.well-known/ document to advertise; this manifest records the absence only.
+  The hosts below are also NO LONGER CONTROLLED BY THE COMPANY — intarcia.com and
+  intarciatherapeutics.com both resolve to 52.20.84.62 on ns1/ns2.atom.com and serve an
+  Atom.com domain-broker parking page offering the names for sale. Nothing observed on these
+  hosts should be attributed to Intarcia Therapeutics as a publisher; they are recorded here
+  so a later run does not re-probe them expecting a company surface.
+soft_404_control:
+  url: https://intarcia.com/zzz-control-nonsense-xyz789
+  status: 404
+  size_bytes: 679
+  finding: >-
+    The control path returns a real 404, identical in size to every probe below, so the 404s
+    are genuine hard misses rather than a soft-200 catch-all.
+hosts:
+- host: intarcia.com
+  note: Atom.com domain-broker parking page; not company-controlled as of 2026-08-23.
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+- host: www.intarcia.com
+  note: Same parking page as the apex.
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+- host: intarciatherapeutics.com
+  note: Second company name variant; same Atom.com parking page.
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+contract_discovery:
+  note: >-
+    STEP 0b was run in full against every host before concluding no contract exists.
+  probes:
+  - url: https://intarcia.com/openapi.json
+    status: 404
+  - url: https://intarcia.com/swagger.json
+    status: 404
+  - url: https://intarcia.com/api-docs
+    status: 404
+  - url: https://intarcia.com/llms.txt
+    status: 404
+  dns:
+    note: >-
+      No developer-facing subdomain resolves. api., developer., docs., portal., dev. and
+      app..intarcia.com all return no A record.
+  graphql: not-applicable
+  mcp: not-applicable
+  agent_card: none-found

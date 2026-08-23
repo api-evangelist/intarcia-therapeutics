@@ -64,5 +64,21 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Intarcia Therapeutics is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://forgeglobal.com/intarcia-therapeutics_stock/
+Intarcia Therapeutics, Inc. was a Boston-headquartered clinical-stage biopharmaceutical and
+drug-delivery company that developed the Medici Drug Delivery System — a matchstick-sized
+subdermal osmotic mini-pump for continuous, months-long delivery of therapeutic peptides — and
+its lead candidate ITCA 650 (implantable exenatide) for type 2 diabetes. The FDA issued complete
+response letters in 2017 and 2020, the company wound down, and the Medici / ITCA 650 assets were
+acquired by i2o Therapeutics in August 2023. FDA published its final decision refusing approval
+of ITCA 650 on 2024-08-23.
+
+**There is no API surface here.** Intarcia was a drug-device developer, not a software company,
+and it never published a developer program, public API, SDK, webhook surface or machine-readable
+specification. As of 2026-08-23 `intarcia.com` and `intarciatherapeutics.com` resolve to an
+Atom.com domain-broker parking page that returns HTTP 404 on every path (verified against a
+nonsense control path, so these are hard 404s and not a soft-200 catch-all), and no
+developer-facing subdomain resolves. The probe record is in
+[`well-known/intarcia-therapeutics-well-known.yml`](well-known/intarcia-therapeutics-well-known.yml).
+
+This profile is retained as a historical record. Coverage is recorded in `apis.yml` as
+`x-coverage: {state: none, reason: defunct}`.
