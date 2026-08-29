@@ -42,6 +42,17 @@ x-venue-listing-note: >-
   The Forge Global secondary-market page this company was harvested from is recorded above as
   x-secondary-market-listing and is deliberately NOT wired as a common[] Website pointer — a
   trading-venue listing is not a company web presence (network roadmap#56).
+deliveryModel:
+  model: unknown
+  open_source: false
+  commercial: false
+  callable_host: false
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - none
+  generated: '2026-08-28'
+  method: derived
 specificationVersion: '0.23'
 created: '2026-08-23'
 modified: '2026-08-23'
