@@ -20,6 +20,9 @@ description: >-
   HTTP 404 on every path, and no developer-facing subdomain resolves. This profile is retained as
   a historical record; there is no API surface to enrich.
 url: https://raw.githubusercontent.com/api-evangelist/intarcia-therapeutics/refs/heads/main/apis.yml
+x-api-posture: no-product-api
+x-api-posture-basis: observed
+x-api-posture-note: "Intarcia was a drug-device developer rather than a software company: its corporate site carried only Medici System, Pipeline, Newsroom, About, Leadership and Careers sections and never published a dev"
 x-type: company
 x-source: harvest:secondary-market
 x-secondary-market-listing: https://forgeglobal.com/intarcia-therapeutics_stock/
